@@ -21,6 +21,7 @@ namespace ABMMascotas
             conexion = new SqlConnection(cadenaConexion);
             comando = new SqlCommand();
         }
+
         
         private void conectar()
         {
@@ -72,4 +73,5 @@ namespace ABMMascotas
             return filasAfectadas;
         }
     }
+
 }

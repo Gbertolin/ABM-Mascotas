@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ABMMascotas
 {
@@ -13,6 +14,7 @@ namespace ABMMascotas
         private int especie;
         private int sexo;
         private DateTime fechaNacimiento;
+        private string apellido;
         public int pCodigo
         {
             get { return codigo; }
@@ -33,6 +35,11 @@ namespace ABMMascotas
             get { return sexo; }
             set { sexo = value; }
         }
+        public string pApellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
+        }
         public DateTime pFechaNacimiento
         {
             get { return fechaNacimiento; }
@@ -45,14 +52,16 @@ namespace ABMMascotas
             this.especie = 0;
             this.sexo = 0;
             this.fechaNacimiento = DateTime.Today;
+            this.apellido = "";
         }
-        public Mascota(int codigo,string nombre,int especie,int sexo,DateTime fechaNacimiento)
+        public Mascota(int codigo,string nombre,int especie,int sexo,DateTime fechaNacimiento,string apellido)
         {
             this.codigo = codigo;
             this.nombre = nombre;
             this.especie = especie;
             this.sexo = sexo;
             this.fechaNacimiento = fechaNacimiento;
+            this.apellido = apellido;
         }
         public override string ToString()
         {
